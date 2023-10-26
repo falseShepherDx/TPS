@@ -11,9 +11,11 @@ namespace TPSProject.Animations
         {
             _animator = player.GetComponentInChildren<Animator>();
         }
-        public void MoveAnimation()
+        public void MoveAnimation(float moveSpeed)
         {
-            
+            if (_animator.GetFloat("moveSpeed") == moveSpeed) return;
+
+            _animator.SetFloat("moveSpeed",moveSpeed,0.1f,Time.deltaTime);
         }
         
     }

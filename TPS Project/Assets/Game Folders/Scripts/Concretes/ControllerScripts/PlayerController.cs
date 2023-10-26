@@ -36,6 +36,11 @@ namespace TPSProject.Controllers
             _mover.MoveAction(direction,_moveSpeed);
 
          }
+
+         private void LateUpdate()
+         {
+             _animation.MoveAnimation(direction.magnitude);
+         }
      }
     
 }
