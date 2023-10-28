@@ -12,6 +12,7 @@ namespace TPSProject.Movements
         public CharacterControllerMovement(PlayerController playerController)
         {
             _characterController = playerController.GetComponent<CharacterController>();
+            
         }
         
         public void MoveAction(Vector3 direction, float moveSpeed)
