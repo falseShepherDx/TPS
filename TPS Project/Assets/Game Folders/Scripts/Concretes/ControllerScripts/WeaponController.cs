@@ -15,7 +15,7 @@ namespace TPSProject.Controllers
         [SerializeField] private LayerMask _damageableLayer;
         [SerializeField] private int _magazineSize;
         private int _bulletsLeft,bulletsShot;
-        bool _isReloading,_isShooting=false,_readyToShoot;
+        bool _isReloading,_isShooting,_readyToShoot;
         
         private IInputReader _input;
 
@@ -41,7 +41,7 @@ namespace TPSProject.Controllers
             // if (!_readyToShoot) return;
             _readyToShoot = false;
             _isShooting = true;
-            if (_bulletsLeft <= 0 ||_isReloading ) return;
+            if (_bulletsLeft <= 0 ||_isReloading ||!_isShooting ) return;
             Ray ray = _camera.ViewportPointToRay(Vector3.one / 2f);
             if (Physics.Raycast(ray, out RaycastHit rayhit, _shootingDistance, _damageableLayer))
             {
