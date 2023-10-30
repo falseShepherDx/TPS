@@ -1,3 +1,4 @@
+using TPSProject.Abstracts.Controllers;
 using TPSProject.Abstracts.Movements;
 using TPSProject.Controllers;
 using UnityEngine;
@@ -9,9 +10,9 @@ namespace TPSProject.Movements
         CharacterController _characterController;
 
 
-        public CharacterControllerMovement(PlayerController playerController)
+        public CharacterControllerMovement(IEntityController _entityController)
         {
-            _characterController = playerController.GetComponent<CharacterController>();
+            _characterController = _entityController.Transform.GetComponent<CharacterController>();
             
         }
         

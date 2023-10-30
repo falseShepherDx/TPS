@@ -123,6 +123,34 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 8b2b510ef9ab5b44db1899f5aa4a105f, type: 2}
+--- !u!1 &417757397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2177439253161528721, guid: db7e7b8869305af428028637c2b892fe, type: 3}
+  m_PrefabInstance: {fileID: 997881734}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &417757400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417757397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +277,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2177439253161528721, guid: db7e7b8869305af428028637c2b892fe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3467994717686935307, guid: db7e7b8869305af428028637c2b892fe, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3976832889392109201, guid: db7e7b8869305af428028637c2b892fe, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -300,8 +336,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2177439253161528721, guid: db7e7b8869305af428028637c2b892fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 417757400}
   m_SourcePrefab: {fileID: 100100000, guid: db7e7b8869305af428028637c2b892fe, type: 3}
+--- !u!4 &1544590670 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6524010997760641126, guid: 48c16b8e30798b044a79aa5e629e954f, type: 3}
+  m_PrefabInstance: {fileID: 3273576110239849183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1712756763
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1712756764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,7 +497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1822609725457194519, guid: 48c16b8e30798b044a79aa5e629e954f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2649254062499510567, guid: 48c16b8e30798b044a79aa5e629e954f, type: 3}
       propertyPath: Damping.x
@@ -585,6 +629,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 771722918509495024, guid: 7a7e3bea775c95d4f83f18a2e0a4c22a, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1544590670}
     - target: {fileID: 1041192568798872521, guid: 7a7e3bea775c95d4f83f18a2e0a4c22a, type: 3}
       propertyPath: m_Name
       value: Enemy

@@ -1,4 +1,5 @@
 using System;
+using TPSProject.Abstracts.Controllers;
 using TPSProject.Abstracts.Inputs;
 using TPSProject.Abstracts.Movements;
 using TPSProject.Animations;
@@ -8,14 +9,14 @@ using UnityEngine;
 
 namespace TPSProject.Controllers
 {
-     public class PlayerController : MonoBehaviour
+     public class PlayerController : MonoBehaviour,IEntityController
      {
 
          [Header("MovementFields")] [SerializeField]
          private float _moveSpeed;
          [SerializeField] private float _turnSpeed;
          [SerializeField] private Transform _turnTransform;
-         
+         public Transform Transform { get; private set; }
          private IInputReader _input;
          private IMover _mover;
          private Vector3 direction;
@@ -67,6 +68,8 @@ namespace TPSProject.Controllers
          {
              _animation.MoveAnimation(direction.magnitude);
          }
+
+        
      }
     
 }

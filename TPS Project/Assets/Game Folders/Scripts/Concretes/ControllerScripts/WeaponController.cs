@@ -18,12 +18,15 @@ namespace TPSProject.Controllers
         bool _isReloading,_isShooting,_readyToShoot;
         
         private IInputReader _input;
+        
 
         private void Start()
         {
             _bulletsLeft = _magazineSize;
             _readyToShoot = true;
             _input = GetComponent<IInputReader>();
+            Cursor.lockState = CursorLockMode.Locked;
+
         }
 
         private void Update()
